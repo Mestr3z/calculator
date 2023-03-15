@@ -1,0 +1,108 @@
+body {
+    background-image: url("https://i.imgur.com/FoFz10x.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+
+  /* анимация кнопок при нажатии */
+  button:active {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  .calculator {
+    margin: 50px auto;
+    background-color: #fff;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .display {
+    background-color: #eee;
+    padding: 10px;
+    text-align: right;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .display input[type="text"] {
+    border: none;
+    font-size: 24px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+  }
+  
+  button {
+    background-color: #fff;
+    color: #333;
+    font-size: 24px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .operator {
+    background-color: #f2f2f2;
+  }
+  
+  .operator:hover {
+    background-color: #ddd;
+  }
+  
+  .number {
+    background-color: #fff;
+  }
+  
+  .number:hover {
+    background-color: #eee;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .calculator {
+      margin: 20px auto;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .calculator {
+      max-width: 300px;
+    }
+  
+    .display input[type="text"] {
+      font-size: 20px;
+      padding: 3px;
+    }
+  
+    button {
+      font-size: 20px;
+      padding: 10px;
+    }
+  }
+  
